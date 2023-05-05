@@ -1,0 +1,2773 @@
+[
+    {
+        "id": "743a62898f598be4",
+        "type": "tab",
+        "label": "Somfy Tahoma APIs",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c8d703f331c6071d",
+        "type": "group",
+        "z": "743a62898f598be4",
+        "name": "Zonneschermen",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f9baa6877a6cb5f7",
+            "c013bae9169e27b9",
+            "8996eb27cc3798ba",
+            "017a08c0a582c90c",
+            "d166203d735fae5f",
+            "1eaab033f68f4aeb",
+            "4e1831d42cf531af",
+            "2348cf9aa4611024",
+            "f7ecd15f245f12af",
+            "ef617d8ce6930543",
+            "3ca391b0f4bd36e8",
+            "5be6961222360e34",
+            "04421a302892d6b4",
+            "600193ffafd5b981",
+            "2dc60a25e7b4e180",
+            "9602b1977e1bd875",
+            "980d0d0ec33fdb13",
+            "10505c1f6d64de38",
+            "9ebe33c37380e440",
+            "fa21d77d608d2e27",
+            "ecc7d7a1107b7fe1",
+            "d1bf2590bff5ebb0",
+            "1e3a6e1f00af0555",
+            "cd8247a5b99e3bba",
+            "1a1e75425d864eb2",
+            "e7d1685b76b30329",
+            "4984951f2f209c9a",
+            "1311622006974fd7",
+            "f98c7ce054f65983",
+            "a8e954352c582076",
+            "53f2ee23598af3bd",
+            "727ad394334376ae",
+            "02e40a2b349b97bb",
+            "1b7e179817b90ce8",
+            "5339a2cf2a892a70",
+            "12235a4e62659c4c",
+            "5a869be925c71afc",
+            "a544716e34b0934b",
+            "bff78000d0158a48",
+            "446e6035a22d2517",
+            "90914236891c77c7",
+            "095985e3aba8f8bd",
+            "07fd601fb49189ca",
+            "82ba4aae8b8369ea",
+            "c2c37f185ae8e4a4",
+            "566546da77f190ca",
+            "21d96ab435737c02",
+            "77a2a99ae11a396e",
+            "bd9766838d44804b",
+            "c53da0a8c39cac4d",
+            "f0a764cccac8b5b0",
+            "6c5e0442f3b81ca6",
+            "7a23dba3918351b7",
+            "2e3d397b960dfa16",
+            "cef03e389cc31311",
+            "347c8bf885ac4fc6",
+            "717b777781762550",
+            "6af6c0be1b10894c",
+            "95171bb901276d30",
+            "c776b5b855ce1ea1",
+            "f41857b2acc3cb9e",
+            "7a44b5c07bdf9f90",
+            "49b5a0cda19f26b4",
+            "84a7abdf50f0331c",
+            "f598774a90835f0e",
+            "087a2eeda9c25efb",
+            "d2d6f0940241b9ae",
+            "a146402c0d678e74",
+            "097084ecc724f3dc",
+            "a0356808815d71e3",
+            "ee4b043a41b18607",
+            "ac5c855a4203b94a",
+            "ddde0956f5a04cb9",
+            "a3b06caac89f4822",
+            "fb44365d10bec73c",
+            "fc59f9630da6600b",
+            "41fee61e1cb8e464",
+            "0e1891b8bec5ae24",
+            "f66ff5c3027ea2e4",
+            "e8660d1ec87c96d8",
+            "53c81259b50a3bc6",
+            "86b2f503aaf3a1d6",
+            "8f5291f7bccfbf9c",
+            "d3a4b49305cce7a5",
+            "83954201d5216263",
+            "5db24da0735601b2",
+            "3e5d0dc7cbc14ac7",
+            "06eabc507ba89fdc",
+            "5a8dc3d7c7823340",
+            "c23caaad5005c3ce",
+            "536325eae80dc1af",
+            "9bc60edb91af0dbd",
+            "09c152d5c4f3b9f4",
+            "1258b9d18c21d2f4",
+            "f4a88f5837c3ee58"
+        ],
+        "x": 14,
+        "y": 39,
+        "w": 3172,
+        "h": 1762
+    },
+    {
+        "id": "bc19a665e5e8a179",
+        "type": "ui_numeric",
+        "z": "743a62898f598be4",
+        "name": "",
+        "label": "Wind Woonkamer",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "10",
+        "step": "0.5",
+        "className": "",
+        "x": 530,
+        "y": 1400,
+        "wires": [
+            [
+                "7e6241e67cd26a4f"
+            ]
+        ]
+    },
+    {
+        "id": "7e6241e67cd26a4f",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "function dT Woonkamer",
+        "func": "let SP = {};\n\nSP = msg.payload;\n{\nglobal.set('Wind.Woonkamer', SP, \"file\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1400,
+        "wires": [
+            [
+                "392b490122fe257d"
+            ]
+        ]
+    },
+    {
+        "id": "878d206ca5e09bea",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "function ScreensSP",
+        "func": "let SP = {};\n\nSP = msg.payload;\n{\n    global.set('Wind.Screens', SP, \"file\");\n    global.set('Tahoma.Wind_Screens', \"Down\", \"file\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1460,
+        "wires": [
+            [
+                "5d233fc2836669fa"
+            ]
+        ]
+    },
+    {
+        "id": "8139117127f08cc9",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "function ZipscreenSP",
+        "func": "let SP = {};\n\nSP = msg.payload;\n{\n    global.set('Wind.Zipscreens', SP, \"file\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1520,
+        "wires": [
+            [
+                "51b628b2f636deaf"
+            ]
+        ]
+    },
+    {
+        "id": "392b490122fe257d",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "name": "debug 163",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "5d233fc2836669fa",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "name": "debug 164",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "51b628b2f636deaf",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "name": "debug 165",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "5ff717bd37baab7d",
+        "type": "ui_numeric",
+        "z": "743a62898f598be4",
+        "name": "",
+        "label": "Wind Screens",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "12",
+        "step": "0.5",
+        "className": "",
+        "x": 520,
+        "y": 1460,
+        "wires": [
+            [
+                "878d206ca5e09bea"
+            ]
+        ]
+    },
+    {
+        "id": "af87f75a36dfb74e",
+        "type": "ui_numeric",
+        "z": "743a62898f598be4",
+        "name": "",
+        "label": "Wind Zipscreens",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "12",
+        "step": "0.5",
+        "className": "",
+        "x": 530,
+        "y": 1520,
+        "wires": [
+            [
+                "8139117127f08cc9"
+            ]
+        ]
+    },
+    {
+        "id": "f9baa6877a6cb5f7",
+        "type": "http request",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Get Devices",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://10.0.0.161:8443/enduser-mobile-web/1/enduserAPI/setup/devices",
+        "tls": "930fdadf3d5bf745",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "bearer",
+        "senderr": false,
+        "headers": [],
+        "credentials": {},
+        "x": 750,
+        "y": 380,
+        "wires": [
+            [
+                "8996eb27cc3798ba",
+                "c2c37f185ae8e4a4"
+            ]
+        ]
+    },
+    {
+        "id": "c013bae9169e27b9",
+        "type": "inject",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "180",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 380,
+        "wires": [
+            [
+                "f9baa6877a6cb5f7"
+            ]
+        ]
+    },
+    {
+        "id": "8996eb27cc3798ba",
+        "type": "json",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 930,
+        "y": 380,
+        "wires": [
+            [
+                "3ca391b0f4bd36e8",
+                "347c8bf885ac4fc6"
+            ]
+        ]
+    },
+    {
+        "id": "017a08c0a582c90c",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Debug zonnescherm Woonkamer Domoticz",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2450,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d166203d735fae5f",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Functie Woonkamer",
+        "func": "var Lichtsensor = msg.payload;\nLichtsensor = parseFloat(Lichtsensor.toFixed(0));\nvar Woonkamer_PV = global.get('EvoHome_woonkamer_PV', \"file\");\nvar Woonkamer_PVdec = parseFloat(Woonkamer_PV).toFixed(1);\nvar Woonkamer_SP = global.get('EvoHome_woonkamer_SP', \"file\");\nvar Woonkamer_SPdec = parseFloat(Woonkamer_SP).toFixed(1);\nlet Setpoint = global.get('Tahoma_setpoint', \"file\"); // Setpoint schermen uit;\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\nlet msg4 = {};\nvar Switch = global.get('Switch.Woonkamer', \"file\"); //Schakeltemp woonkamer\nvar SwitchOpen = Switch-1;\nvar Switchdec = parseFloat(Switch).toFixed(1);\nlet OnOff = global.get('TahomaSwitch',\"file\");\nlet Wind_PV = global.get('Wind_PV', \"file\");\nlet Wind_SP = global.get('Wind.Woonkamer', \"file\")\n\n//msg.payload = { \"Licht\": Lichtsensor, \"PV\": Woonkamer_PV, \"SP\": Woonkamer_SP, \"Setpoint\": Setpoint };\nif( OnOff == true){\nif (Lichtsensor > Setpoint && Woonkamer_PV >= (Switch) && Wind_PV < Wind_SP) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 492, \"switchcmd\": \"Off\" }; //Off = Down\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 493, \"switchcmd\": \"Off\" }; //Off = Down\n    msg3.payload = \"Status: Uit (1) - \" + \"Temp: \" + Woonkamer_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP; //test\n    //msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Woonkamer_PV, \"SP\": Woonkamer_SP, \"Setpoint\": Setpoint, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg4.payload = Woonkamer_PV\n}\n\nelse if (Lichtsensor > Setpoint && Woonkamer_PV >= (SwitchOpen) && Woonkamer_PV < Switch) {\n    msg1.payload = null; //No message\n    msg2.payload = null; //No message\n    msg3.payload = \"Status: Hold (2) - \" + \"Temp: \" + Woonkamer_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    //msg2.payload = { \"Licht\": Lichtsensor, \"PV\": Woonkamer_PV, \"SP\": Slaapkamer_SP, \"Setpoint\": Setpoint, 'DT': Slaapkamer_DT, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg4.payload = Woonkamer_PV\n}\n\n\nelse if (Lichtsensor > Setpoint && Woonkamer_PV < (SwitchOpen)) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 492, \"switchcmd\": \"On\" }; //On = Up\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 493, \"switchcmd\": \"On\" }; //On = Up\n    msg3.payload = \"Status: In (3) - \" + \"Temp: \" + Woonkamer_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP; //{ 'Switch@': Switch, 'Status': 'In' };\n    //msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Woonkamer_PV, \"SP\": Woonkamer_SP, \"Setpoint\": Setpoint, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg4.payload = Woonkamer_PV\n}\n\nelse {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 492, \"switchcmd\": \"On\" }; //On = Up\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 493, \"switchcmd\": \"On\" }; //On = Up\n    msg3.payload = \"Status: In (4) - \" + \"Temp: \" + Woonkamer_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    //msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Woonkamer_PV, \"SP\": Woonkamer_SP, \"Setpoint\": Setpoint, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg4.payload = Woonkamer_PV\n}\n\n\nreturn [msg1, msg2, msg3, msg4];\n}\n\n\n//return msg;\n\n/*\nvar Lichtsensor = msg.payload[3].states[3].value;\nvar Zolder_PV = global.get('EvoHome_2everdieping_PV', \"file\");\nvar Zolder_SP = global.get('EvoHome_2everdieping_SP', \"file\");\nlet Setpoint = global.get('Tahoma_setpoint', \"file\"); // parseFloat ('25000');\nlet Check = Zolder_SP + 0.5;\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\n\n//msg.payload = {\"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint};\n\nif (Lichtsensor >= Setpoint && Zolder_PV >= (Check)) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"Off\" }; //Off = Down\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 500, \"switchcmd\": \"Off\" }; //Off = Down\n    msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint }; //test\n}\n\nelse {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"On\" }; //On = Up\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 500, \"switchcmd\": \"On\" }; //On = Up\n    msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint, 'Check': Check }; //test\n}\n\nreturn [msg1, msg2, msg3];\n*/",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 160,
+        "wires": [
+            [
+                "017a08c0a582c90c",
+                "2348cf9aa4611024"
+            ],
+            [
+                "017a08c0a582c90c",
+                "2348cf9aa4611024"
+            ],
+            [
+                "ef617d8ce6930543",
+                "12235a4e62659c4c"
+            ],
+            [
+                "77a2a99ae11a396e"
+            ]
+        ]
+    },
+    {
+        "id": "1eaab033f68f4aeb",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Functie 2e Verdieping",
+        "func": "var Lichtsensor = msg.payload;\nLichtsensor = parseFloat(Lichtsensor.toFixed(0));\nvar Zolder_PV = global.get('EvoHome_2everdieping_PV', \"file\");\nvar Zolder_PVdec = parseFloat(Zolder_PV).toFixed(1);\nvar Zolder_SP = global.get('EvoHome_2everdieping_SP', \"file\");\nvar Zolder_SPdec = parseFloat(Zolder_SP).toFixed(1);\nlet Setpoint = global.get('Tahoma_setpoint', \"file\"); // parseFloat ('25000');\nlet Zolder_DT = global.get('Zolder_dT', \"file\")\nvar Switch = global.get('Switch.Zolder', \"file\");\nvar SwitchOpen = Switch - 1;\nvar Switchdec = parseFloat(Switch).toFixed(1);\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\nlet msg4 = {};\nlet OnOff = global.get('TahomaSwitch', \"file\");\nlet Wind_PV = global.get('Wind_PV', \"file\");\nlet Wind_SP = global.get('Wind.Zipscreens', \"file\")\n\n//msg.payload = {\"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint};\n\nif (OnOff == true) {\nif (Lichtsensor > Setpoint && Zolder_PV >= (Switch) && Wind_PV < Wind_SP) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"Off\" }; //Off = Down\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 497, \"switchcmd\": \"Off\" }; //Off = Down\n    msg3.payload = \"Status: Neer (1) - \" + \"Temp: \" + Zolder_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP + \" - Lichtsensor: \" + Lichtsensor + \" - Setpoint:\" + Setpoint;\n    //msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint, 'DT': Zolder_DT, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg4.payload = Zolder_PV;\n}\n\nelse if (Lichtsensor > Setpoint && Zolder_PV >= (SwitchOpen) && Zolder_PV < Switch ) {\n    msg1.payload = null; //No message\n    msg2.payload = null; //No message\n    msg3.payload = \"Status: Hold (2) - \" + \"Temp: \" + Zolder_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    //msg2.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint, 'DT': Zolder_DT, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg4.payload = Zolder_PV\n}\n\nelse if (Lichtsensor > Setpoint && Zolder_PV < (SwitchOpen)) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"On\" }; //Off = Down\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 497, \"switchcmd\": \"On\" }; //Off = Down\n    msg3.payload = \"Status: Op (3) - \" + \"Temp: \" + Zolder_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP + \" - Lichtsensor: \" + Lichtsensor + \" - Setpoint:\" + Setpoint;\n    //msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint, 'DT': Zolder_DT, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg4.payload = Zolder_PV;\n}\n\nelse {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"On\" }; //On = Up\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 497, \"switchcmd\": \"On\" }; //On = Up\n    msg3.payload = \"Status: Op (4) - \" + \"Temp: \" + Zolder_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP + \" - Lichtsensor: \" + Lichtsensor + \" - Setpoint:\" + Setpoint;\n    //msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint, 'DT': Zolder_DT, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg4.payload = Zolder_PV;\n}\n\nreturn [msg1, msg2, msg3, msg4];\n}\n//return [msg];\n\n\n/*\n\n\n\nif (Lichtsensor >= Setpoint && Zolder_PV >= (Zolder_SP - 1)) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 499, \"switchcmd\": \"Off\" }; //Off = Down\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 500, \"switchcmd\": \"Off\" }; //Off = Down\n}\n\nelse {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 499, \"switchcmd\": \"On\" }; //On = Up\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 500, \"switchcmd\": \"On\" }; //On = Up\n}\n\nreturn [msg1, msg2];\n*/",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 860,
+        "wires": [
+            [
+                "4e1831d42cf531af",
+                "2348cf9aa4611024"
+            ],
+            [
+                "4e1831d42cf531af",
+                "2348cf9aa4611024"
+            ],
+            [
+                "f7ecd15f245f12af",
+                "bff78000d0158a48"
+            ],
+            [
+                "f0a764cccac8b5b0"
+            ]
+        ]
+    },
+    {
+        "id": "4e1831d42cf531af",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Debug zonneschermen 2e verdieping domoticz",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2480,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "2348cf9aa4611024",
+        "type": "mqtt out",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "topic": "domoticz/in",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "92e5b2c.00a8b5",
+        "x": 2570,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f7ecd15f245f12af",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Debug zonneschermen 2e verdieping values",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2470,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "ef617d8ce6930543",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Debug zonnescherm Woonkamer values",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2440,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3ca391b0f4bd36e8",
+        "type": "change",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[3].states[2].value",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Lichtsterkte",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 380,
+        "wires": [
+            [
+                "5be6961222360e34",
+                "5a869be925c71afc",
+                "90914236891c77c7",
+                "04421a302892d6b4"
+            ]
+        ]
+    },
+    {
+        "id": "5be6961222360e34",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 140 raw measure",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "04421a302892d6b4",
+        "type": "smooth",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "5",
+        "round": "0",
+        "mult": "single",
+        "reduce": false,
+        "x": 1340,
+        "y": 380,
+        "wires": [
+            [
+                "d166203d735fae5f",
+                "1eaab033f68f4aeb",
+                "600193ffafd5b981",
+                "2dc60a25e7b4e180",
+                "10505c1f6d64de38",
+                "ac5c855a4203b94a"
+            ]
+        ]
+    },
+    {
+        "id": "600193ffafd5b981",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 141 smooth measure",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2dc60a25e7b4e180",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Functie Slaapkamer",
+        "func": "var Lichtsensor = msg.payload;\nLichtsensor = parseFloat(Lichtsensor.toFixed(0));\nvar Slaapkamer_PV = global.get('EvoHome_slaapkamer_PV', \"file\");\nvar Slaapkamer_PVdec = parseFloat(Slaapkamer_PV).toFixed(1);\nvar Slaapkamer_SP = global.get('EvoHome_slaapkamer_SP', \"file\");\nvar Slaapkamer_SPdec = parseFloat(Slaapkamer_SP).toFixed(1);\nlet Setpoint = global.get('Tahoma_setpoint', \"file\"); // parseFloat ('25000');\n\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\nvar Switch = global.get('Switch.Slaapkamer', \"file\");\nvar SwitchOpen = Switch - 1;\nvar Switchdec = parseFloat(Switch).toFixed(1);\nlet OnOff = global.get('TahomaSwitch', \"file\");\nlet Wind_PV = global.get('Wind_PV', \"file\");\nlet Wind_SP = global.get('Wind.Screens', \"file\");\n\n\n/*\nmsg.payload = { \"Licht\": Lichtsensor, \"PV\": Slaapkamer_PV, \"SP\": Slaapkamer_SP, \"Setpoint\": Setpoint };\nreturn msg;\n*/\nif (OnOff == true) {\nif (Lichtsensor > Setpoint && Slaapkamer_PV >= (Switch) && Wind_PV < Wind_SP) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 494, \"switchcmd\": \"Off\" }; //Off = Down\n    msg2.payload = \"Status: Neer (1) - \" + \"Temp: \" + Slaapkamer_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    msg3.payload = Slaapkamer_PV\n}\n\nelse if (Lichtsensor > Setpoint && Slaapkamer_PV >= (SwitchOpen) && Slaapkamer_PV < Switch) {\n    msg1.payload = null; //No message\n    msg2.payload = \"Status: Hold (2) - \" + \"Temp: \" + Slaapkamer_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    msg3.payload = Slaapkamer_PV\n}\n\nelse if (Lichtsensor > Setpoint && Slaapkamer_PV < (SwitchOpen)) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 494, \"switchcmd\": \"On\" }; //Off = Down\n    msg2.payload = \"Status: Op (3) - \" + \"Temp: \" + Slaapkamer_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    msg3.payload = Slaapkamer_PV\n}\n\n\nelse {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 494, \"switchcmd\": \"On\" }; //On = Up\n    msg2.payload = \"Status: Op (4) - \" + \"Temp: \" + Slaapkamer_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    msg3.payload = Slaapkamer_PV\n}\n\nreturn [msg1, msg2, msg3];\n}\n\n\n\n/*\nvar Lichtsensor = msg.payload[3].states[3].value;\nvar Zolder_PV = global.get('EvoHome_2everdieping_PV', \"file\");\nvar Zolder_SP = global.get('EvoHome_2everdieping_SP', \"file\");\nlet Setpoint = global.get('Tahoma_setpoint', \"file\"); // parseFloat ('25000');\nlet Check = Zolder_SP + 0.5;\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\n\n//msg.payload = {\"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint};\n\nif (Lichtsensor >= Setpoint && Zolder_PV >= (Check)) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"Off\" }; //Off = Down\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 500, \"switchcmd\": \"Off\" }; //Off = Down\n    msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint }; //test\n}\n\nelse {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"On\" }; //On = Up\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 500, \"switchcmd\": \"On\" }; //On = Up\n    msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint, 'Check': Check }; //test\n}\n\nreturn [msg1, msg2, msg3];\n*/",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 280,
+        "wires": [
+            [
+                "2348cf9aa4611024",
+                "9602b1977e1bd875"
+            ],
+            [
+                "980d0d0ec33fdb13",
+                "a544716e34b0934b"
+            ],
+            [
+                "21d96ab435737c02"
+            ]
+        ]
+    },
+    {
+        "id": "9602b1977e1bd875",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Debug zonnescherm Slaapkamer Domoticz",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2670,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "980d0d0ec33fdb13",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Debug zonnescherm Slaapkamer Values",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2660,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "10505c1f6d64de38",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Functie Gym",
+        "func": "var Lichtsensor = msg.payload;\nLichtsensor = parseFloat(Lichtsensor.toFixed(0));\nvar Gym_PV = global.get('EvoHome_gym_PV', \"file\");\nvar Gym_PVdec = parseFloat(Gym_PV).toFixed(1);\nvar Gym_SP = global.get('EvoHome_gym_SP', \"file\");\nvar Gym_SPdec = parseFloat(Gym_SP).toFixed(1);\nlet Setpoint = global.get('Tahoma_setpoint', \"file\"); // parseFloat ('25000');\nlet Gym_DT = global.get('Gym_dT', \"file\")\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\nvar Switch = global.get('Switch.Gym', \"file\");\nvar SwitchOpen = Switch - 1;\nvar Switchdec = parseFloat(Switch).toFixed(1);\nlet OnOff = global.get('TahomaSwitch', \"file\");\nlet Wind_PV = global.get('Wind_PV', \"file\");\nlet Wind_SP = global.get('Wind.Screens', \"file\")\n\n/*\nmsg.payload = { \"Licht\": Lichtsensor, \"PV\": Gym_PV, \"SP\": Gym_SP, \"Setpoint\": Setpoint };\nreturn msg;\n*/\nif (OnOff == true) {\nif (Lichtsensor > Setpoint && Gym_PV >= (Switch) && Wind_PV < Wind_SP) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 495, \"switchcmd\": \"Off\" }; //Off = Down\n    msg2.payload = \"Status: Neer (1) - \" + \"Temp: \" + Gym_PV + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    //msg2.payload = { \"Licht\": Lichtsensor, \"PV\": Gym_PV, \"SP\": Gym_SP, \"Setpoint\": Setpoint, 'DT': Gym_DT, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg3.payload = Gym_PV;\n}\n\nelse if (Lichtsensor > Setpoint && Gym_PV >= (SwitchOpen) && Gym_PV < Switch) {\n//else if ((Lichtsensor > Setpoint || (Gym_PV >= (SwitchOpen) && Gym_PV < Switch)) && OnOff == true) {\n    msg1.payload = null; //No message\n    msg2.payload = \"Status: Hold (2) - \" + \"Temp: \" + Gym_PVdec + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    //msg2.payload = { \"Licht\": Lichtsensor, \"PV\": Gym_PV, \"SP\": Gym_SP, \"Setpoint\": Setpoint, 'DT': Gym_DT, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg3.payload = Gym_PV\n}\n\nelse if (Lichtsensor > Setpoint && Gym_PV < (SwitchOpen)) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 495, \"switchcmd\": \"On\" }; //Off = Down\n    msg2.payload = \"Status: Op (3) - \" + \"Temp: \" + Gym_PV + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    //msg2.payload = { \"Licht\": Lichtsensor, \"PV\": Gym_PV, \"SP\": Gym_SP, \"Setpoint\": Setpoint, 'DT': Gym_DT, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg3.payload = Gym_PV;\n}\n\nelse {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 495, \"switchcmd\": \"On\" }; //On = Up\n    msg2.payload = \"Status: Op (4) - \" + \"Temp: \" + Gym_PV + \" - Switch@:\" + Switchdec + \" - SwitchOpen\" + SwitchOpen + \" - Wind_PV:\" + Wind_PV + \" Wind_SP:\" + Wind_SP;\n    //msg2.payload = { \"Licht\": Lichtsensor, \"PV\": Gym_PV, \"SP\": Gym_SP, \"Setpoint\": Setpoint, 'DT': Gym_DT, 'Switch@': Switch, 'OnOff': OnOff }; //test\n    msg3.payload = Gym_PV;\n}\n\nreturn [msg1, msg2, msg3];\n}\n\n\n/*\nvar Lichtsensor = msg.payload[3].states[3].value;\nvar Zolder_PV = global.get('EvoHome_2everdieping_PV', \"file\");\nvar Zolder_SP = global.get('EvoHome_2everdieping_SP', \"file\");\nlet Setpoint = global.get('Tahoma_setpoint', \"file\"); // parseFloat ('25000');\nlet Check = Zolder_SP + 0.5;\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\n\n//msg.payload = {\"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint};\n\nif (Lichtsensor >= Setpoint && Zolder_PV >= (Check)) {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"Off\" }; //Off = Down\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 500, \"switchcmd\": \"Off\" }; //Off = Down\n    msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint }; //test\n}\n\nelse {\n    msg1.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"On\" }; //On = Up\n    msg2.payload = { \"command\": \"switchlight\", \"idx\": 500, \"switchcmd\": \"On\" }; //On = Up\n    msg3.payload = { \"Licht\": Lichtsensor, \"PV\": Zolder_PV, \"SP\": Zolder_SP, \"Setpoint\": Setpoint, 'Check': Check }; //test\n}\n\nreturn [msg1, msg2, msg3];\n*/",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 640,
+        "wires": [
+            [
+                "2348cf9aa4611024",
+                "9ebe33c37380e440"
+            ],
+            [
+                "fa21d77d608d2e27",
+                "446e6035a22d2517"
+            ],
+            [
+                "c53da0a8c39cac4d"
+            ]
+        ]
+    },
+    {
+        "id": "9ebe33c37380e440",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Debug zonnescherm Gym Domoticz",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2610,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "fa21d77d608d2e27",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Debug zonnescherm Gym Values",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2600,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ecc7d7a1107b7fe1",
+        "type": "ui_numeric",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Lux Down",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100000",
+        "step": "1000",
+        "className": "",
+        "x": 540,
+        "y": 600,
+        "wires": [
+            [
+                "1e3a6e1f00af0555"
+            ]
+        ]
+    },
+    {
+        "id": "d1bf2590bff5ebb0",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 144",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "1e3a6e1f00af0555",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Lux switch",
+        "func": "let Setpoint = {};\n\nSetpoint = msg.payload;\n{\nglobal.set('Tahoma_setpoint', Setpoint, \"file\");\nglobal.set('Tahoma.Light_Down', Setpoint, \"file\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 600,
+        "wires": [
+            [
+                "d1bf2590bff5ebb0"
+            ]
+        ]
+    },
+    {
+        "id": "cd8247a5b99e3bba",
+        "type": "ui_numeric",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Switchtemp Woonkamer",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "18",
+        "max": "23",
+        "step": "0.5",
+        "className": "",
+        "x": 590,
+        "y": 720,
+        "wires": [
+            [
+                "1a1e75425d864eb2"
+            ]
+        ]
+    },
+    {
+        "id": "1a1e75425d864eb2",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "function Switch Woonkamer",
+        "func": "let Switch = {};\n\nSwitch = msg.payload;\n{\nglobal.set('Switch.Woonkamer', Switch, \"file\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 720,
+        "wires": [
+            [
+                "f98c7ce054f65983"
+            ]
+        ]
+    },
+    {
+        "id": "e7d1685b76b30329",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "function Switch Slaapkamer",
+        "func": "let Switch = {};\n\nSwitch = msg.payload;\n{\n    global.set('Switch.Slaapkamer', Switch, \"file\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 780,
+        "wires": [
+            [
+                "a8e954352c582076"
+            ]
+        ]
+    },
+    {
+        "id": "4984951f2f209c9a",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "function Switch Gym",
+        "func": "let Switch = {};\n\nSwitch = msg.payload;\n{\n    global.set('Switch.Gym', Switch, \"file\");\n\n    global.set('Tahoma.Temp_Gym', \"Down\", \"file\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 840,
+        "wires": [
+            [
+                "53f2ee23598af3bd"
+            ]
+        ]
+    },
+    {
+        "id": "1311622006974fd7",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "function Switch 2e Verdieping",
+        "func": "let Switch = {};\n\nSwitch = msg.payload;\n{\n    global.set('Switch.Zolder', Switch, \"file\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 900,
+        "wires": [
+            [
+                "727ad394334376ae"
+            ]
+        ]
+    },
+    {
+        "id": "f98c7ce054f65983",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 145",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a8e954352c582076",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 146",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "53f2ee23598af3bd",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 147",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "727ad394334376ae",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 148",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "02e40a2b349b97bb",
+        "type": "ui_numeric",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Switchtemp Slaapkamer",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "18",
+        "max": "23",
+        "step": "0.5",
+        "className": "",
+        "x": 590,
+        "y": 780,
+        "wires": [
+            [
+                "e7d1685b76b30329"
+            ]
+        ]
+    },
+    {
+        "id": "1b7e179817b90ce8",
+        "type": "ui_numeric",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Switchtemp Gym",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "18",
+        "max": "23",
+        "step": "0.5",
+        "className": "",
+        "x": 570,
+        "y": 840,
+        "wires": [
+            [
+                "4984951f2f209c9a"
+            ]
+        ]
+    },
+    {
+        "id": "5339a2cf2a892a70",
+        "type": "ui_numeric",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Switchtemp 2e Verdieping",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "18",
+        "max": "23",
+        "step": "0.5",
+        "className": "",
+        "x": 590,
+        "y": 900,
+        "wires": [
+            [
+                "1311622006974fd7"
+            ]
+        ]
+    },
+    {
+        "id": "12235a4e62659c4c",
+        "type": "ui_text",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "group": "cdd6bc3a70d5012e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Woonkamer",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2350,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5a869be925c71afc",
+        "type": "ui_text",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "group": "cdd6bc3a70d5012e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Lichtsensor",
+        "format": "{{msg.payload}} lux",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1370,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a544716e34b0934b",
+        "type": "ui_text",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "group": "cdd6bc3a70d5012e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Slaapkamer",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2570,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "bff78000d0158a48",
+        "type": "ui_text",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "group": "cdd6bc3a70d5012e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "2e Verdieping",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2380,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "446e6035a22d2517",
+        "type": "ui_text",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "group": "cdd6bc3a70d5012e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Gym   ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2510,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "90914236891c77c7",
+        "type": "ui_chart",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "group": "85e909c93386b7a6",
+        "order": 0,
+        "width": "14",
+        "height": "5",
+        "label": "Lichtsterkte",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100000",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1370,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "095985e3aba8f8bd",
+        "type": "ui_switch",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Sturing Aan/uit",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 560,
+        "y": 540,
+        "wires": [
+            [
+                "82ba4aae8b8369ea"
+            ]
+        ]
+    },
+    {
+        "id": "07fd601fb49189ca",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 150",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "82ba4aae8b8369ea",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Functie aan/uit",
+        "func": "var FunctionSwitch = {};\n\nFunctionSwitch = msg.payload\nglobal.set('TahomaSwitch',FunctionSwitch, \"file\");\n\n\n\nreturn [msg]\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 540,
+        "wires": [
+            [
+                "07fd601fb49189ca"
+            ]
+        ]
+    },
+    {
+        "id": "c2c37f185ae8e4a4",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 151",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "566546da77f190ca",
+        "type": "ui_chart",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "group": "85e909c93386b7a6",
+        "order": 1,
+        "width": "14",
+        "height": "10",
+        "label": "Roomtemperature PV",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "30",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2860,
+        "y": 400,
+        "wires": [
+            [
+                "bd9766838d44804b"
+            ]
+        ]
+    },
+    {
+        "id": "21d96ab435737c02",
+        "type": "change",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "PV_Slaapkamer",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2570,
+        "y": 360,
+        "wires": [
+            [
+                "566546da77f190ca"
+            ]
+        ]
+    },
+    {
+        "id": "77a2a99ae11a396e",
+        "type": "change",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "PV_Woonkamer",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2350,
+        "y": 200,
+        "wires": [
+            [
+                "566546da77f190ca",
+                "ee4b043a41b18607"
+            ]
+        ]
+    },
+    {
+        "id": "bd9766838d44804b",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 155",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3070,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c53da0a8c39cac4d",
+        "type": "change",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "PV_Gym",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2530,
+        "y": 700,
+        "wires": [
+            [
+                "566546da77f190ca"
+            ]
+        ]
+    },
+    {
+        "id": "f0a764cccac8b5b0",
+        "type": "change",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "PV_2eVerdieping",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2370,
+        "y": 940,
+        "wires": [
+            [
+                "566546da77f190ca"
+            ]
+        ]
+    },
+    {
+        "id": "6c5e0442f3b81ca6",
+        "type": "inject",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 540,
+        "y": 1760,
+        "wires": [
+            [
+                "7a23dba3918351b7"
+            ]
+        ]
+    },
+    {
+        "id": "7a23dba3918351b7",
+        "type": "http request",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "API Version",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://10.0.0.161:8443/enduser-mobile-web/1/enduserAPI/apiVersion",
+        "tls": "930fdadf3d5bf745",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "bearer",
+        "senderr": false,
+        "headers": [],
+        "x": 750,
+        "y": 1760,
+        "wires": [
+            [
+                "2e3d397b960dfa16"
+            ]
+        ]
+    },
+    {
+        "id": "2e3d397b960dfa16",
+        "type": "json",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 950,
+        "y": 1760,
+        "wires": [
+            [
+                "cef03e389cc31311"
+            ]
+        ]
+    },
+    {
+        "id": "cef03e389cc31311",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 136",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "347c8bf885ac4fc6",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 156",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "717b777781762550",
+        "type": "ui_switch",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Woonkamer",
+        "tooltip": "",
+        "group": "a2e65bc36447190d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 550,
+        "y": 980,
+        "wires": [
+            [
+                "84a7abdf50f0331c"
+            ]
+        ]
+    },
+    {
+        "id": "6af6c0be1b10894c",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 157",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "95171bb901276d30",
+        "type": "ui_switch",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Keuken",
+        "tooltip": "",
+        "group": "a2e65bc36447190d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 540,
+        "y": 1040,
+        "wires": [
+            [
+                "a0356808815d71e3"
+            ]
+        ]
+    },
+    {
+        "id": "c776b5b855ce1ea1",
+        "type": "ui_switch",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Slaapkamer",
+        "tooltip": "",
+        "group": "a2e65bc36447190d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 550,
+        "y": 1100,
+        "wires": [
+            [
+                "097084ecc724f3dc"
+            ]
+        ]
+    },
+    {
+        "id": "f41857b2acc3cb9e",
+        "type": "ui_switch",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Gym",
+        "tooltip": "",
+        "group": "a2e65bc36447190d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 530,
+        "y": 1160,
+        "wires": [
+            [
+                "a146402c0d678e74"
+            ]
+        ]
+    },
+    {
+        "id": "7a44b5c07bdf9f90",
+        "type": "ui_switch",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Balkonraam",
+        "tooltip": "",
+        "group": "a2e65bc36447190d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 550,
+        "y": 1220,
+        "wires": [
+            [
+                "d2d6f0940241b9ae"
+            ]
+        ]
+    },
+    {
+        "id": "49b5a0cda19f26b4",
+        "type": "ui_switch",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Balkondeur",
+        "tooltip": "",
+        "group": "a2e65bc36447190d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 550,
+        "y": 1280,
+        "wires": [
+            [
+                "f598774a90835f0e"
+            ]
+        ]
+    },
+    {
+        "id": "84a7abdf50f0331c",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Function up/down",
+        "func": "if (msg.payload == true) \n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 492, \"switchcmd\": \"Off\" }; //Off = Down\n    }\n\nelse if (msg.payload == false)\n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 492, \"switchcmd\": \"On\" }; //On = Down\n    }\n    \nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 980,
+        "wires": [
+            [
+                "6af6c0be1b10894c",
+                "087a2eeda9c25efb"
+            ]
+        ]
+    },
+    {
+        "id": "f598774a90835f0e",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Function up/down",
+        "func": "if (msg.payload == true) \n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 497, \"switchcmd\": \"Off\" }; //Off = Down\n    }\n\nelse if (msg.payload == false)\n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 497, \"switchcmd\": \"On\" }; //On = Down\n    }\n    \nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1280,
+        "wires": [
+            [
+                "087a2eeda9c25efb"
+            ]
+        ]
+    },
+    {
+        "id": "087a2eeda9c25efb",
+        "type": "mqtt out",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "topic": "domoticz/in",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "92e5b2c.00a8b5",
+        "x": 1550,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "d2d6f0940241b9ae",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Function up/down",
+        "func": "if (msg.payload == true) \n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"Off\" }; //Off = Down\n    }\n\nelse if (msg.payload == false)\n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 496, \"switchcmd\": \"On\" }; //On = Down\n    }\n    \nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1220,
+        "wires": [
+            [
+                "087a2eeda9c25efb"
+            ]
+        ]
+    },
+    {
+        "id": "a146402c0d678e74",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Function up/down",
+        "func": "if (msg.payload == true) \n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 495, \"switchcmd\": \"Off\" }; //Off = Down\n    }\n\nelse if (msg.payload == false)\n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 495, \"switchcmd\": \"On\" }; //On = Down\n    }\n    \nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1160,
+        "wires": [
+            [
+                "087a2eeda9c25efb"
+            ]
+        ]
+    },
+    {
+        "id": "097084ecc724f3dc",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Function up/down",
+        "func": "if (msg.payload == true) \n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 494, \"switchcmd\": \"Off\" }; //Off = Down\n    }\n\nelse if (msg.payload == false)\n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 494, \"switchcmd\": \"On\" }; //On = Down\n    }\n    \nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1100,
+        "wires": [
+            [
+                "087a2eeda9c25efb"
+            ]
+        ]
+    },
+    {
+        "id": "a0356808815d71e3",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Function up/down",
+        "func": "if (msg.payload == true) \n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 493, \"switchcmd\": \"Off\" }; //Off = Down\n    }\n\nelse if (msg.payload == false)\n    {\n    msg.payload = { \"command\": \"switchlight\", \"idx\": 493, \"switchcmd\": \"On\" }; //On = Down\n    }\n    \nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1040,
+        "wires": [
+            [
+                "087a2eeda9c25efb"
+            ]
+        ]
+    },
+    {
+        "id": "ee4b043a41b18607",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 160",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2890,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ac5c855a4203b94a",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Sunscreen Light",
+        "func": "let SetpointDown = global.get('Tahoma.Light_Down', \"file\");\nlet SetpointUp = global.get('Tahoma.Light_Up', \"file\");\n\nif (msg.payload <  SetpointUp)\n{\n    msg.payload = \"Up\";\n    return msg;\n}\n\nelse if (msg.payload >= SetpointDown)\n{\n    msg.payload = \"Down\"\n    return msg;\n}\n\n\nelse\n{\n    msg.payload = \"Hold\"    \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1980,
+        "y": 1120,
+        "wires": [
+            [
+                "ddde0956f5a04cb9",
+                "a3b06caac89f4822",
+                "06eabc507ba89fdc"
+            ]
+        ]
+    },
+    {
+        "id": "ddde0956f5a04cb9",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug licht",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2310,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "41fee61e1cb8e464",
+        "type": "ui_numeric",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "label": "Lux Up",
+        "tooltip": "",
+        "group": "11b8876a7b7e5539",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100000",
+        "step": "1000",
+        "className": "",
+        "x": 540,
+        "y": 660,
+        "wires": [
+            [
+                "fb44365d10bec73c"
+            ]
+        ]
+    },
+    {
+        "id": "0e1891b8bec5ae24",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 182",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "fb44365d10bec73c",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Lux switch",
+        "func": "let Setpoint = {};\n\nSetpoint = msg.payload;\n{\nglobal.set('Tahoma.Light_Up', Setpoint, \"file\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 660,
+        "wires": [
+            [
+                "0e1891b8bec5ae24"
+            ]
+        ]
+    },
+    {
+        "id": "a3b06caac89f4822",
+        "type": "ui_text",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "group": "cdd6bc3a70d5012e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Licht",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2290,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "fc59f9630da6600b",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('TahomaSwitch',\"file\");\n\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Tahomaswitch'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 540,
+        "wires": [
+            [
+                "095985e3aba8f8bd"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "f66ff5c3027ea2e4",
+        "type": "inject",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2100",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 800,
+        "wires": [
+            [
+                "fc59f9630da6600b",
+                "e8660d1ec87c96d8",
+                "53c81259b50a3bc6",
+                "ce30ea766d1df381",
+                "6d53be31c0ceac42",
+                "073a7c176b409c76",
+                "278b2c8a8ad91b5b",
+                "83954201d5216263",
+                "5db24da0735601b2",
+                "3e5d0dc7cbc14ac7"
+            ]
+        ]
+    },
+    {
+        "id": "e8660d1ec87c96d8",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('Tahoma_setpoint',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Tahoma_setpoint'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 600,
+        "wires": [
+            [
+                "ecc7d7a1107b7fe1"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "53c81259b50a3bc6",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('Tahoma.Setpoint_Up',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Tahoma.Setpoint_Up'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 660,
+        "wires": [
+            [
+                "41fee61e1cb8e464"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "ce30ea766d1df381",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('Switch.Woonkamer',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Switch.Woonkamer'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 720,
+        "wires": [
+            [
+                "cd8247a5b99e3bba"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "6d53be31c0ceac42",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('Switch.Slaapkamer',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Switch.Slaapkamer'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 780,
+        "wires": [
+            [
+                "02e40a2b349b97bb"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "073a7c176b409c76",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('Switch.Gym',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Switch.Gym'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 840,
+        "wires": [
+            [
+                "1b7e179817b90ce8"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "278b2c8a8ad91b5b",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('Switch.Zolder',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Switch.Zolder'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 900,
+        "wires": [
+            [
+                "5339a2cf2a892a70"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "47e7b4ef6414d31a",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('ForceDHW',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'ForceDHW'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 980,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "1fa31d9735369f5d",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('ForceDHW',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'ForceDHW'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1040,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "1285def73c4098c9",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('ForceDHW',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'ForceDHW'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1100,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "86b2f503aaf3a1d6",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('ForceDHW',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'ForceDHW'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1160,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "8f5291f7bccfbf9c",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('ForceDHW',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'ForceDHW'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1220,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "d3a4b49305cce7a5",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('ForceDHW',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'ForceDHW'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1280,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "83954201d5216263",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('Wind.Woonkamer',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Wind.Woonkamer'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1400,
+        "wires": [
+            [
+                "bc19a665e5e8a179"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "5db24da0735601b2",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('Wind.Screens',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Wind.Screens'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1460,
+        "wires": [
+            [
+                "5ff717bd37baab7d"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "3e5d0dc7cbc14ac7",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Load on boot",
+        "func": "var var1                    = global.get('Wind.Zipscreens',\"file\");\nlet msg1={};\n\nif(var1 === undefined)      {\n                            return null;    \n                            }\n                            \nelse                        {\n                            msg1.payload = var1;\n                            msg1.topic = 'Wind.Zipscreens'; \n                            return msg1;\n                            }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1520,
+        "wires": [
+            [
+                "af87f75a36dfb74e"
+            ]
+        ],
+        "outputLabels": [
+            "Heatpump_State"
+        ]
+    },
+    {
+        "id": "06eabc507ba89fdc",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Function gym test",
+        "func": "//var Wind = global.get('Tahoma.Wind_Screens', \"file\");\nvar Wind = msg.wind;\nvar Temp = global.get('Tahoma.Temp_Gym', 'file');\n\nif (msg.payload == 'Down' && Wind == 'Down' && Temp == 'Down')\n{\nmsg.payload = 'Down';\n}\n\nelse if (msg.payload == 'Up' || Wind == 'Up' || Temp == 'Up')\n{\nmsg.payload = 'Up' + Wind; \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2390,
+        "y": 1240,
+        "wires": [
+            [
+                "5a8dc3d7c7823340"
+            ]
+        ]
+    },
+    {
+        "id": "5a8dc3d7c7823340",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 183",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2670,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "c23caaad5005c3ce",
+        "type": "link in",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "Link in Wind",
+        "links": [
+            "f0556cd2fb75c2e1"
+        ],
+        "x": 1825,
+        "y": 1380,
+        "wires": [
+            [
+                "536325eae80dc1af",
+                "09c152d5c4f3b9f4"
+            ]
+        ]
+    },
+    {
+        "id": "536325eae80dc1af",
+        "type": "function",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "function Wind Test",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\n\nvar windWoonkamer = global.get('Wind.Woonkamer', \"file\");\nvar windScreens = global.get('Wind.Screens', \"file\");\nvar windZipscreens = global.get('Wind.Zipscreens', \"file\");\n\nvar tahomaWind_Woonkamer = {};\nvar tahomaWind_Screens = {};\nvar tahomaWind_Zipscreens = {};\n\nif (msg.payload <= windWoonkamer)\n{\n    msg1.wind = 'Down';\n    global.set('Tahoma.Wind_Woonkamer',\"Down\", \"file\");\n}\n\nelse\n{\n    msg1.wind = 'Up';\n    global.set('Tahoma.Wind_Woonkamer', \"Up\", \"file\");\n}\n\nif (msg.payload <= windScreens)\n{\n    msg2.wind = 'Down';\n    global.set('Tahoma.Wind_Screens', \"Down\", \"file\");\n}\n\nelse \n{\n    msg2.wind = 'Up';\n    global.set('Tahoma.Wind_Screens', \"Up\", \"file\");\n}\n\nif (msg.payload <= windScreens)\n{\n    msg3.wind = 'Down';\n    global.set('Tahoma.Wind_Zipscreens', \"Down\", \"file\");\n}\n\nelse\n{\n    msg3.wind = 'Up';\n    global.set('Tahoma.Wind_Zipscreens', \"Up\", \"file\");\n}\n\nreturn [msg1,msg2,msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1990,
+        "y": 1380,
+        "wires": [
+            [
+                "9bc60edb91af0dbd"
+            ],
+            [
+                "1258b9d18c21d2f4",
+                "06eabc507ba89fdc"
+            ],
+            [
+                "f4a88f5837c3ee58"
+            ]
+        ]
+    },
+    {
+        "id": "9bc60edb91af0dbd",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug wind woonkamer",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2270,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "09c152d5c4f3b9f4",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug 185",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1970,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "1258b9d18c21d2f4",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug wind screens",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2260,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "f4a88f5837c3ee58",
+        "type": "debug",
+        "z": "743a62898f598be4",
+        "g": "c8d703f331c6071d",
+        "name": "debug wind zipscreens",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2260,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "47942206021e11c1",
+        "type": "ui_spacer",
+        "z": "743a62898f598be4",
+        "name": "spacer",
+        "group": "a2e65bc36447190d",
+        "order": 2,
+        "width": "1",
+        "height": "4"
+    },
+    {
+        "id": "5e8f879b6fbfa016",
+        "type": "ui_spacer",
+        "z": "743a62898f598be4",
+        "name": "spacer",
+        "group": "cdd6bc3a70d5012e",
+        "order": 7,
+        "width": "1",
+        "height": "3"
+    },
+    {
+        "id": "11b8876a7b7e5539",
+        "type": "ui_group",
+        "name": "Input",
+        "tab": "21daaeaaf5421973",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "930fdadf3d5bf745",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "92e5b2c.00a8b5",
+        "type": "mqtt-broker",
+        "name": "MQTT (NAS)",
+        "broker": "10.0.0.4",
+        "port": "1883",
+        "clientid": "Node_Red_Client",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cdd6bc3a70d5012e",
+        "type": "ui_group",
+        "name": "Current State",
+        "tab": "21daaeaaf5421973",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "85e909c93386b7a6",
+        "type": "ui_group",
+        "name": "Chart",
+        "tab": "21daaeaaf5421973",
+        "order": 4,
+        "disp": true,
+        "width": "28",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a2e65bc36447190d",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "21daaeaaf5421973",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "21daaeaaf5421973",
+        "type": "ui_tab",
+        "name": "Zonneschermen",
+        "icon": "wi-wu-mostlysunny",
+        "order": 14,
+        "disabled": false,
+        "hidden": false
+    }
+]
